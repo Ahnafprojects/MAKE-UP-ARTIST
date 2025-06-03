@@ -1,0 +1,132 @@
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.services-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.services-header p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.booking-info {
+  text-align: center;
+  background-color: #f9f3f5;
+  padding: 40px 20px;
+  border-radius: 8px;
+  margin: 40px 0;
+}
+
+.booking-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.booking-info p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.booking-button {
+  background-color: #d48a9b;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.booking-button:hover {
+  background-color: #c07a8b;
+}
+
+.services-faq {
+  margin-top: 60px;
+}
+
+.services-faq h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.faq-item {
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #d48a9b;
+}
+
+.faq-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  
+  .services-header h1 {
+    font-size: 2rem;
+  }
+  
+  .booking-info h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .services-container {
+    padding: 40px 15px;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .services-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .booking-button {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+}

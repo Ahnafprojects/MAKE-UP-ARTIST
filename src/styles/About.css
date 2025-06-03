@@ -1,0 +1,385 @@
+/* About.css */
+
+.about-page {
+  padding-bottom: 80px;
+}
+
+/* Page Header */
+.page-header {
+  background-color: #f8f1f0;
+  padding: 80px 0 60px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.page-header h1 {
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.page-header p {
+  font-size: 18px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* About Section */
+.section {
+  margin-bottom: 80px;
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.about-image {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.03);
+}
+
+.about-image::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(215, 131, 157, 0.1), rgba(215, 131, 157, 0.3));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.about-image:hover::after {
+  opacity: 1;
+}
+
+.about-content h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.about-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #d7839d;
+}
+
+.about-content p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.about-signature {
+  margin-top: 30px;
+  font-family: 'Pacifico', cursive;
+  font-size: 28px;
+  color: #d7839d;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 42px;
+  font-weight: 700;
+  color: #d7839d;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Philosophy Section */
+.section-title {
+  font-size: 36px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #d7839d;
+}
+
+.philosophy-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.philosophy-item {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.philosophy-item:hover {
+  transform: translateY(-5px);
+}
+
+.philosophy-icon {
+  width: 70px;
+  height: 70px;
+  background-color: #f8f1f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.philosophy-icon i {
+  font-size: 30px;
+  color: #d7839d;
+}
+
+.philosophy-item h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.philosophy-item p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Certifications Section */
+.certifications-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.certification-item {
+  display: flex;
+  margin-bottom: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.certification-year {
+  background-color: #d7839d;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+}
+
+.certification-details {
+  padding: 20px 30px;
+}
+
+.certification-details h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.certification-details p {
+  font-size: 15px;
+  color: #666;
+}
+
+/* Testimonials Section */
+.testimonials {
+  margin-top: 80px;
+  padding: 60px 0;
+  background-color: #f8f1f0;
+}
+
+.testimonials-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.testimonials-heading h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.testimonials-heading p {
+  font-size: 16px;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.testimonial-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-content {
+  font-size: 16px;
+  color: #666;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.testimonial-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-info h4 {
+  font-size: 18px;
+  color: #333;
+  margin: 0 0 5px;
+}
+
+.testimonial-info p {
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .about-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .philosophy-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 60px 0 40px;
+  }
+  
+  .page-header h1 {
+    font-size: 36px;
+  }
+  
+  .about-content h2,
+  .section-title {
+    font-size: 30px;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  
+  .stat-number {
+    font-size: 36px;
+  }
+  
+  .certification-year {
+    font-size: 20px;
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-stats {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .philosophy-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .certification-item {
+    flex-direction: column;
+  }
+  
+  .certification-year {
+    width: 100%;
+    padding: 10px;
+  }
+}

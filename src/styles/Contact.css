@@ -1,0 +1,308 @@
+/* Contact.css - Mobile First Design */
+
+.contact-container {
+  padding: 20px 16px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #fff 0%, #fff 100%);
+  min-height: 100vh;
+}
+
+/* Header Section */
+.contact-header {
+  text-align: center;
+  margin-bottom: 32px;
+  padding: 20px 0;
+}
+
+.contact-header h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.contact-header p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Quick Contact Cards */
+.quick-contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.quick-contact-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.quick-contact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background:  #c07a8b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.contact-details h4 {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin: 0 0 4px 0;
+  font-weight: 600;
+}
+
+.contact-details p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0 0 8px 0;
+}
+
+.contact-btn {
+  display: inline-block;
+  background: #c07a8b;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px  #c07a8b;
+}
+
+.service-area, .appointment-note {
+  font-size: 0.8rem;
+  color: #888;
+  display: block;
+}
+
+/* Social Media Section */
+.social-section {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.social-section h3 {
+  font-size: 1.4rem;
+  color: #666;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.social-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+}
+
+.social-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.social-card svg {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.social-card span {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.social-card small {
+  color: #666;
+  font-size: 0.85rem;
+  margin-left: auto;
+}
+
+.social-card.instagram svg {
+  color: #E4405F;
+}
+
+.social-card.facebook svg {
+  color: #1877F2;
+}
+
+.social-card.tiktok svg {
+  color: #000;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  background: white;
+  border-radius: 20px;
+  padding: 24px 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.form-header h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-header p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.contact-form-container {
+  width: 100%;
+}
+
+/* Success Message */
+.form-success-message {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  color: white;
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 16px;
+}
+
+.form-success-message h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-success-message p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .contact-container {
+    padding: 40px 32px;
+    max-width: 1200px;
+  }
+  
+  .contact-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .quick-contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .social-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  
+  .social-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .social-card small {
+    margin-left: 0;
+    margin-top: 4px;
+  }
+  
+  .contact-form-section {
+    padding: 40px;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .contact-container {
+    padding: 60px 40px;
+  }
+  
+  .contact-header h1 {
+    font-size: 3rem;
+  }
+  
+  .quick-contact-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  
+  .quick-contact-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 24px;
+  }
+  
+  .contact-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.4rem;
+  }
+  
+  .social-section h3 {
+    font-size: 1.6rem;
+  }
+  
+  .contact-form-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+  }
+}
