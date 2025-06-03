@@ -74,15 +74,16 @@ Pesan: ${formData.message}`;
   // Variables for responsiveness
   const isMobile = windowWidth <= 768;
 
-  // For demo purposes with styles inline
+  // Updated responsive styles
   const styles = {
     contactFormContainer: {
       backgroundColor: '#f9f9f9',
-      padding: isMobile ? '2rem' : '3rem',
+      padding: isMobile ? '1.5rem' : '3rem',
       borderRadius: '10px',
       boxShadow: '0 5px 30px rgba(0, 0, 0, 0.1)',
       maxWidth: '600px',
-      margin: '0 auto'
+      margin: '0 auto',
+      width: '100%'
     },
     contactForm: {
       display: 'flex',
@@ -90,14 +91,17 @@ Pesan: ${formData.message}`;
       gap: '1.5rem'
     },
     formRow: {
-      display: 'grid',
-      gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
-      gap: isMobile ? '1rem' : '1.5rem'
+      display: 'flex',
+      flexDirection: isMobile ? 'column' : 'row',
+      gap: isMobile ? '1.5rem' : '1.5rem',
+      width: '100%'
     },
     formGroup: {
       display: 'flex',
       flexDirection: 'column',
-      gap: '0.5rem'
+      gap: '0.5rem',
+      flex: isMobile ? 'none' : '1',
+      width: '100%'
     },
     label: {
       fontWeight: 500,
@@ -111,7 +115,9 @@ Pesan: ${formData.message}`;
       fontFamily: '"Poppins", sans-serif',
       fontSize: '1rem',
       transition: 'border-color 0.3s ease',
-      resize: 'none'
+      resize: 'none',
+      width: '100%',
+      boxSizing: 'border-box'
     },
     submitBtn: {
       padding: '1rem',
@@ -122,7 +128,9 @@ Pesan: ${formData.message}`;
       color: 'white',
       border: 'none',
       borderRadius: '5px',
-      cursor: 'pointer'
+      cursor: 'pointer',
+      width: '100%',
+      transition: 'all 0.3s ease'
     },
     disabledBtn: {
       backgroundColor: '#ccc',
@@ -159,7 +167,7 @@ Pesan: ${formData.message}`;
           </button>
         </div>
       ) : (
-        <div style={styles.contactForm} className="contact-form">
+        <form onSubmit={handleSubmit} style={styles.contactForm} className="contact-form">
           <div style={styles.formGroup} className="form-group">
             <label style={styles.label} htmlFor="name">Full Name</label>
             <input
@@ -252,11 +260,10 @@ Pesan: ${formData.message}`;
             style={formStatus.submitting ? {...styles.submitBtn, ...styles.disabledBtn} : styles.submitBtn}
             className="btn submit-btn"
             disabled={formStatus.submitting}
-            onClick={handleSubmit}
           >
             {formStatus.submitting ? 'Sending...' : 'Send Message'}
           </button>
-        </div>
+        </form>
       )}
     </div>
   );
