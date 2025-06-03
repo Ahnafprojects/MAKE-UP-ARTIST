@@ -52,6 +52,20 @@ const Portfolio = () => {
     ? portfolioItems
     : portfolioItems.filter(item => item.category === activeCategory);
 
+  // Function to handle category click from portfolio card
+  const handleCategoryClick = (category) => {
+    setActiveCategory(category);
+    
+    // Smooth scroll ke bagian filter untuk memberikan feedback visual
+    const filtersElement = document.querySelector('.portfolio-filters');
+    if (filtersElement) {
+      filtersElement.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'center' 
+      });
+    }
+  };
+
   return (
     <div className="portfolio-page">
       {/* Page Header */}
@@ -86,6 +100,7 @@ const Portfolio = () => {
                 image={item.image}
                 category={item.category}
                 title={item.title}
+                onCategoryClick={handleCategoryClick}
               />
             ))}
           </div>
